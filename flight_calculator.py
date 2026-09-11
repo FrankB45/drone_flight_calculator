@@ -20,6 +20,8 @@ def calculate_flight_time(weight_grams):
         ValueError: If weight_grams is negative.
     """
 
+    #Here based on my comments above the function, Copilot suggested a solution that satisfies the requirements
+    #I accepted the solution as-is
     if weight_grams < 0:
         raise ValueError("Weight cannot be negative.")
     
@@ -39,6 +41,9 @@ def flight_time_table(max_weight_grams, step_grams):
         A list of tuples containing each payload weight and its calculated
         flight time in minutes.
     """
+    #Again here based on initial comments, Copilot suggested a solution.
+    #However this solution used a Set rather than a list for the table, which would not have allowed duplicate entires
+    #This solution I edited and then changed table to be a list. 
     table = []
     for weight in range(0, max_weight_grams + 1, step_grams):
         flight_time = calculate_flight_time(weight)
